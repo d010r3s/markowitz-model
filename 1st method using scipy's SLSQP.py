@@ -1,5 +1,8 @@
+import time
 import numpy as np
 from scipy.optimize import minimize
+
+start_time = time.time()
 
 # objective function
 def objective(weights, returns, cov_matrix, target_return):
@@ -39,3 +42,4 @@ weights = optimize_portfolio(returns, cov_matrix, target_return)
 print('Optimal weights:', weights)
 print('Optimal portfolio return:', np.dot(weights, returns))
 print('Optimal portfolio variance:', np.dot(weights.T, np.dot(cov_matrix, weights)))
+print(f"Time taken: {(time.time() - start_time)*1000} ms")
