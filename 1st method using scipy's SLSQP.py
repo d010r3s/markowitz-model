@@ -1,6 +1,7 @@
 import time
 import numpy as np
 from scipy.optimize import minimize
+import matplotlib.pyplot as plt
 
 start_time = time.time()
 
@@ -43,3 +44,5 @@ print('Optimal weights:', weights)
 print('Optimal portfolio return:', np.dot(weights, returns))
 print('Optimal portfolio variance:', np.dot(weights.T, np.dot(cov_matrix, weights)))
 print(f"Time taken: {(time.time() - start_time)*1000} ms")
+#plt.plot((time taken), (number of variables))
+#plt.show()
