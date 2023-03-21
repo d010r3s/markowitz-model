@@ -17,8 +17,8 @@ def obj_grad(w):
     return 2 * C.dot(w) - gamma * R
 
 # gradient descent
-alpha = 0.001 # learning rate
-max_iter = 100 # number of iterations
+alpha = 0.01 # learning rate
+max_iter = 10000 # number of iterations
 for i in range(max_iter):
     grad = obj_grad(w)
     w = w - alpha * grad
